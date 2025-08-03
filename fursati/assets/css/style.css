@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+body {
+    font-family: "Poppins";
+    background-color: #f7fdfd;
+}
+
+.greeting {
+    color: #a0b6b4 !important;
+    font-size: 22px;
+}
+
+.visitor {
+    color: #48a7a5 !important;
+}
+
+.job-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: "Poppins";
+    position: relative;
+}
+
+.skill-badge {
+    background-color: #e0f7f7;
+    border-radius: 10px;
+    padding: 5px 12px;
+    font-size: 13px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.company-logo {
+    width: 60px !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #48a7a5 !important;
+}
+
+.navbar-collapse .nav-item a {
+    font-family: "Poppins";
+}
+
+.job-meta span {
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .job-card {
+        padding: 30px;
+    }
+}
+
+.btn-save {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.btn-save:disabled {
+    background-color: #E0F7F7;
+    cursor: default;
+    box-shadow: none;
+}
+
+.btn-save.saved {
+    color: #48a7a5;
+}
+
+@media (max-width: 768px) {
+    .btn-save {
+        padding: 6px 14px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+        border-radius: 20px;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-save {
+        padding: 5px 12px;
+        font-size: 13px;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 18px;
+        gap: 5px;
+    }
+}

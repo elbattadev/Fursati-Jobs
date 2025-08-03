@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "4d0aa390-763c-4930-97a2-5ae76e39a92a",
+		"name": "TestApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9120076"
+	},
+	"item": [
+		{
+			"name": "get all job Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "146|NmNVeKL3hmU9GJGrSf3rzFYDlUAGSM3FOIrJc3pr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_date",
+							"value": "15-03-2023",
+							"type": "text"
+						},
+						{
+							"key": "to_date",
+							"value": "30-03-2023",
+							"type": "text"
+						},
+						{
+							"key": "country_of_graduation",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "country_of_residence",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "work_field_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "work_place",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "gender_perfrence",
+							"value": "all or male or female",
+							"type": "text"
+						},
+						{
+							"key": "education_level_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "work_experience",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "business_man_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{app_url}}/ar/api/job-seeker/all-jobs",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"job-seeker",
+						"all-jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job details Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "146|NmNVeKL3hmU9GJGrSf3rzFYDlUAGSM3FOIrJc3pr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{app_url}}/ar/api/job-seeker/job-details/8",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"job-seeker",
+						"job-details",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mark a job favorite Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "146|NmNVeKL3hmU9GJGrSf3rzFYDlUAGSM3FOIrJc3pr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{app_url}}/ar/api/job-seeker/jobs/8/mark-favorite",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"job-seeker",
+						"jobs",
+						"8",
+						"mark-favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all favorite jobs Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "146|NmNVeKL3hmU9GJGrSf3rzFYDlUAGSM3FOIrJc3pr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{app_url}}/ar/api/job-seeker/favorite-jobs",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"job-seeker",
+						"favorite-jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applied job Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "146|NmNVeKL3hmU9GJGrSf3rzFYDlUAGSM3FOIrJc3pr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "vedio",
+							"type": "file",
+							"src": "/H:/ahemd/ahmed mobile/Camera/VID_20210731_014412.mp4"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{app_url}}/ar/api/job-seeker/jobs/applied/8",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"job-seeker",
+						"jobs",
+						"applied",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all company for filter Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{app_url}}/ar/api/all-companies",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"all-companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all faqs Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{app_url}}/ar/api/faqs",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"faqs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get terms & policies Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{app_url}}/ar/api/policies",
+					"host": [
+						"{{app_url}}"
+					],
+					"path": [
+						"ar",
+						"api",
+						"policies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Details</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <style>
+      .header {
+        background: linear-gradient(90deg, #28b7b1, #26b3a6);
+        color: white;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        font-family: "Poppins";
+        cursor: pointer;
+      }
+
+      .job-card {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        font-family: "Poppins";
+      }
+
+      .info-label {
+        font-size: 14px;
+        color: #009d9a;
+        font-weight: 600;
+        font-family: "Poppins";
+      }
+
+      .info-box {
+        background-color: #f0f5f5;
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 14px;
+        font-family: "Poppins";
+      }
+
+      .skill-badge {
+        background-color: #e0f7f7;
+        border-radius: 8px;
+        padding: 5px 12px;
+        font-size: 13px;
+        margin: 5px 5px 0 0;
+        display: inline-block;
+        font-family: "Poppins";
+      }
+
+      .apply-btn {
+        background: #28b7b1;
+        color: white;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-top: 20px;
+        font-family: "Poppins";
+      }
+
+      .section-title {
+        font-weight: 600;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-family: "Poppins";
+      }
+
+      .flag {
+        width: 24px;
+        height: 16px;
+        object-fit: cover;
+        border-radius: 3px;
+        margin-left: 8px;
+      }
+
+      .read-more {
+        color: #009d9a;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header" id="header" style="cursor: pointer">
+      <i class="bi bi-arrow-left me-2 fs-5"></i>
+      <span class="fw-semibold">Back</span>
+    </div>
+
+    <div class="container py-3">
+      <!-- Job Card -->
+      <div class="job-card" id="job-card">
+        <div
+          class="d-flex justify-content-between align-items-center mb-2"
+          id="posted-time-container"
+        >
+          <span class="text-muted small time" id="posted-time">
+            <i class="bi bi-globe2 fs-6"></i> <span></span>
+          </span>
+        </div>
+
+        <h6 class="fw-bold mb-1 title-job" id="job-title">
+          Web and Mobile Development
+        </h6>
+
+        <div class="d-flex align-items-center mb-2" id="company-info">
+          <img
+            src="./assets/images/pure.png"
+            class="rounded-circle me-2 company-logo"
+            id="company-logo"
+          />
+          <small id="company-name"
+            >PURE for IT Solutions • <i class="bi bi-eye"></i> 21k</small
+          >
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="section-title">Details</div>
+
+      <div class="mb-2">
+        <div class="info-label">Job Type</div>
+        <div class="info-box" id="job-type">100$ - 250$</div>
+      </div>
+
+      <div class="mb-2">
+        <div class="info-label">Work Field</div>
+        <div class="info-box" id="work-field">Information Technology</div>
+      </div>
+
+      <div class="mb-2">
+        <div class="info-label">Country of Employment</div>
+        <div class="info-box d-flex align-items-center" id="employment-country">
+          Kuwait
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg"
+            alt="Kuwait Flag"
+            class="flag"
+            id="employment-flag"
+          />
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div class="info-label">Salary / Wage</div>
+        <div class="info-box" id="salary">2.5K - 5K KWD / Month</div>
+      </div>
+
+      <div class="mb-2">
+        <div class="info-label">Required Experience</div>
+        <div class="info-box" id="experience">2 - 5 Years</div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section-title">Skills</div>
+      <div id="skills-container">
+        <span class="skill-badge">Java</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">Bootstrap</span>
+        <span class="skill-badge">PHP Development</span>
+      </div>
+
+      <!-- Job Description -->
+      <div class="section-title">Job Description</div>
+      <div class="info-box" id="job-description">
+        Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam
+        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat...
+        <div class="read-more">Read More</div>
+      </div>
+
+      <!-- Candidate Requirements -->
+      <div class="section-title">Candidate Requirements</div>
+
+      <div class="mb-2">
+        <div class="info-label">Nationality</div>
+        <div class="info-box" id="nationality">Kuwait, Palestinian, Indian</div>
+      </div>
+
+      <div class="mb-2">
+        <div class="info-label">Country Residence</div>
+        <div class="info-box" id="residence-country">Egypt, Jordan, Indian</div>
+      </div>
+
+      <div class="mb-2">
+        <div class="info-label">Gender</div>
+        <div class="info-box" id="gender">All</div>
+      </div>
+
+      <!-- Apply Button -->
+      <button class="apply-btn" id="apply-button">Apply</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobId = urlParams.get("id");
+
+        if (!jobId) {
+          alert("Job ID is missing!");
+          return;
+        }
+
+        const apiUrl = `http://localhost:8000/api/ar/api/job-seeker/job-details/${jobId}`;
+
+        fetch(apiUrl)
+          .then((response) => {
+            if (!response.ok) throw new Error("Job not found");
+            return response.json();
+          })
+          .then((job) => {
+            document.getElementById("job-title").textContent =
+              job.title || "No title";
+            document.getElementById("company-logo").src =
+              job.company_logo_url || "./assets/images/default-logo.png";
+            document.getElementById("company-logo").alt =
+              job.company_name || "Company Logo";
+            document.getElementById("company-name").textContent = `${
+              job.company_name || ""
+            } • ${job.views || 0} views`;
+            document.getElementById(
+              "posted-time"
+            ).innerHTML = `<i class="bi bi-globe2 fs-6"></i> ${
+              job.posted_time || "N/A"
+            }`;
+            document.getElementById("job-type").textContent =
+              job.work_place || "N/A";
+            document.getElementById("work-field").textContent =
+              job.category || "N/A";
+
+            const countryBox = document.getElementById("employment-country");
+            countryBox.childNodes[0].nodeValue = job.country || "N/A";
+            const flagImg = document.getElementById("employment-flag");
+            if (job.country_flag_url) {
+              flagImg.src = job.country_flag_url;
+              flagImg.style.display = "inline-block";
+            } else {
+              flagImg.style.display = "none";
+            }
+
+            document.getElementById("salary").textContent = job.salary || "N/A";
+            document.getElementById("experience").textContent =
+              job.required_experience || "N/A";
+
+            const skillsContainer = document.getElementById("skills-container");
+            if (job.skills && job.skills.length > 0) {
+              skillsContainer.innerHTML = job.skills
+                .split(",")
+                .map(
+                  (skill) => `<span class="skill-badge">${skill.trim()}</span>`
+                )
+                .join("");
+            } else {
+              skillsContainer.textContent = "No skills specified.";
+            }
+
+            document.getElementById("job-description").innerHTML = `
+              ${job.description || "No description"}
+              <div class="read-more">Read More</div>
+            `;
+
+            document.getElementById("nationality").textContent =
+              job.candidate_nationality || "N/A";
+            document.getElementById("residence-country").textContent =
+              job.candidate_country_residence || "N/A";
+            document.getElementById("gender").textContent =
+              job.candidate_gender || "All";
+            document
+              .getElementById("job-card")
+              .addEventListener("click", () => {
+                if (job.company_id) {
+                  window.location.href = `profile.html?id=${job.company_id}`;
+                } else {
+                  alert("Company ID not found.");
+                }
+              });
+          })
+          .catch((error) => {
+            console.error("Error loading job details:", error);
+            alert("Unable to load job details.");
+          });
+
+        document.getElementById("header").addEventListener("click", () => {
+          window.history.back();
+        });
+      });
+    </script>
+  </body>
+</html>

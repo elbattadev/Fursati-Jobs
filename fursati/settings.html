@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <style>
+      .top-icons .btn {
+        border: none;
+        background: none;
+      }
+
+      .setting-title {
+        color: #009d9a;
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-family: "Poppins";
+      }
+
+      .general-settings {
+        font-family: "Poppins";
+        color: #00000088;
+      }
+
+      .setting-item {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+        font-family: "Poppins";
+      }
+
+      .setting-item .left {
+        display: flex;
+        align-items: center;
+      }
+
+      .setting-item a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .setting-item i {
+        font-size: 22px;
+        color: #00b1ad;
+        margin-right: 15px;
+      }
+
+      .setting-item span {
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .nav-footer {
+        background-color: #009d9a;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+
+      .nav-footer a {
+        text-align: center;
+        flex: 1;
+        color: white;
+        font-size: 13px;
+        text-decoration: none;
+        padding: 10px 0;
+      }
+
+      .nav-footer a.active {
+        font-weight: bold;
+        border-top: 3px solid white;
+      }
+
+      .notification-dot {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 10px;
+        height: 10px;
+        background-color: #ffc107;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+
+      .text-teal {
+        color: #009d9a;
+      }
+
+      .modal-content {
+        border: none;
+        border-radius: 16px;
+        font-family: "Poppins";
+      }
+
+      .custom-switch {
+        width: 50px !important;
+        height: 28px !important;
+        background-color: #fff;
+        border-radius: 50px;
+        position: relative;
+        transition: all 0.3s ease;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .custom-switch::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        background-color: #009d9a;
+        border-radius: 50%;
+        top: 3px;
+        left: 3px;
+        transition: 0.3s;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-switch:checked {
+        background-color: rgba(44, 181, 156, 0.202) !important;
+        border: 0;
+      }
+
+      .custom-switch:checked::before {
+        transform: translateX(22px);
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
+      <div class="container">
+        <a class="navbar-brand fs-3" href="index.html">Fursati</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="index.html">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="bookmarks.html">Bookmark</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="settings.html">Setting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="profile.html">Profile</a>
+            </li>
+          </ul>
+
+          <div class="d-flex ms-3">
+            <button class="btn btn-outline-secondary me-2 fs-5">
+              <i class="bi bi-search"></i>
+            </button>
+            <button class="btn btn-outline-secondary me-2 fs-5">
+              <i class="bi bi-funnel"></i>
+            </button>
+            <button class="btn btn-outline-warning position-relative fs-5">
+              <i class="bi bi-bell-fill"></i>
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-1 bg-warning border border-light rounded-circle"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <p class="fs-4 fw-semibold mb-3 general-settings">General Settings</p>
+
+      <div class="setting-item">
+        <div class="left">
+          <i class="bi bi-flag-fill"></i>
+          <a href="#">Job Preference Country</a>
+        </div>
+        <i class="bi bi-chevron-right text-muted"></i>
+      </div>
+
+      <div class="setting-item">
+        <div class="left">
+          <i class="bi bi-question-circle-fill"></i>
+          <a href="faqs.html">FAQs</a>
+        </div>
+        <i class="bi bi-chevron-right text-muted"></i>
+      </div>
+
+      <div class="setting-item">
+        <div class="left">
+          <i class="bi bi-headset"></i>
+          <a href="help.html">Help & Feedback</a>
+        </div>
+        <i class="bi bi-chevron-right text-muted"></i>
+      </div>
+
+      <div
+        class="setting-item"
+        data-bs-toggle="modal"
+        data-bs-target="#privacyModal"
+      >
+        <div class="left">
+          <i class="bi bi-file-earmark-lock-fill"></i>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <i class="bi bi-chevron-right text-muted"></i>
+      </div>
+
+      <div
+        class="setting-item"
+        data-bs-toggle="modal"
+        data-bs-target="#languageModal"
+      >
+        <div class="left">
+          <i class="bi bi-globe2"></i>
+          <a href="#">Language Preference</a>
+        </div>
+        <i class="bi bi-chevron-right text-muted"></i>
+      </div>
+
+      <div class="setting-item">
+        <div class="left">
+          <i class="bi bi-envelope-fill"></i>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#notificationModal"
+            >Notification Settings</a
+          >
+        </div>
+        <i class="bi bi-chevron-right text-muted"></i>
+      </div>
+    </div>
+
+    <!-- Notification Settings Modal -->
+    <div
+      class="modal fade"
+      id="notificationModal"
+      tabindex="-1"
+      aria-labelledby="notificationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3 rounded-4 shadow-sm">
+          <div class="modal-body">
+            <h5 class="text-teal mb-3" id="notificationModalLabel">
+              Notification Settings
+            </h5>
+            <div
+              class="d-flex justify-content-between align-items-center bg-light p-3 rounded-3"
+            >
+              <div>
+                <strong>General Push Notifications</strong>
+                <p class="text-muted mb-0" style="font-size: 13px">
+                  Recieve general updates and notifications
+                </p>
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input custom-switch"
+                  type="checkbox"
+                  role="switch"
+                  id="pushToggle"
+                  checked
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Language Preference Modal -->
+    <div
+      class="modal fade"
+      id="languageModal"
+      tabindex="-1"
+      aria-labelledby="languageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3 rounded-4 shadow-sm">
+          <div class="modal-body">
+            <h5 class="text-teal mb-3" id="languageModalLabel">
+              Language Preference
+            </h5>
+
+            <div
+              class="d-flex align-items-center justify-content-between bg-light p-3 rounded-3 mb-2"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Saudi_Arabia.svg"
+                  alt="Arabic"
+                  width="30"
+                  class="me-2"
+                />
+                <span>العربية</span>
+              </div>
+              <i class="bi bi-check2 text-success fs-4"></i>
+            </div>
+
+            <div
+              class="d-flex align-items-center justify-content-between bg-light p-3 rounded-3"
+            >
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
+                  alt="English"
+                  width="30"
+                  class="me-2"
+                />
+                <span>English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Privacy Policy Modal -->
+    <div
+      class="modal fade"
+      id="privacyModal"
+      tabindex="-1"
+      aria-labelledby="privacyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4 rounded-4 shadow-sm">
+          <div class="modal-body">
+            <h5 class="text-teal mb-3" id="privacyModalLabel">
+              Privacy Policy
+            </h5>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system
+            </p>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system
+            </p>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system
+            </p>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system
+            </p>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
